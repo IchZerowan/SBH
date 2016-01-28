@@ -1,4 +1,4 @@
-program SBH;
+program Maths;
 
 uses
   Vcl.Forms,

@@ -2,7 +2,7 @@ object Form1: TForm1
   Left = 0
   Top = 0
   BorderStyle = bsSingle
-  Caption = 'Students'#39' best helper'
+  Caption = 'Maths'
   ClientHeight = 460
   ClientWidth = 404
   Color = clBtnFace
