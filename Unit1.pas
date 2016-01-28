@@ -372,7 +372,7 @@ end;
 
 procedure TForm1.Button20Click(Sender: TObject);
 begin
-  edtCalc.Text:= floattostr(pi);
+  edtCalc.Text := floattostr(pi);
 end;
 
 procedure TForm1.Button2Click(Sender: TObject);
@@ -471,22 +471,33 @@ begin
 end;
 
 procedure TForm1.SBH_sendClick(Sender: TObject);
-var f: TextFile;
+var
+  f: TextFile;
 begin
-  assignFile(f, 'data.ini');
-   rewrite(f);
-   Writeln(f, edtCalc.text);
+  try
+    assignFile(f, 'data.ini');
+    rewrite(f);
+    Writeln(f, edtCalc.Text);
+  finally
+    CloseFile(f);
+  end;
 end;
 
 procedure TForm1.btnSBHgetClick(Sender: TObject);
-var f: TextFile;
+var
+  f: TextFile;
+  s: string;
 begin
-  if fileexists('data.ini') then
   try
-  reset(f);
-    edtCalc.Text = inttostr(strtoint(readln(f)));
+    if fileexists('data.ini') then
+    begin
+      reset(f);
+      read(f, s);
+      edtCalc.Text := inttostr(strtoint(s));
+      CloseFile(f);
+    end;
   finally
-    closefile(f);
+
   end;
 end;
 // Calculator block
