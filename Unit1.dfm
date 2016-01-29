@@ -409,10 +409,6 @@ object Form1: TForm1
     object TabSheet2: TTabSheet
       Caption = #1059#1088#1072#1074#1085#1077#1085#1080#1103
       ImageIndex = 1
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object Label1: TLabel
         Left = 90
         Top = 32
@@ -514,10 +510,6 @@ object Form1: TForm1
     object TabSheet3: TTabSheet
       Caption = #1050#1088#1091#1075
       ImageIndex = 2
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object Label6: TLabel
         Left = 27
         Top = 3
@@ -634,10 +626,6 @@ object Form1: TForm1
     object TabSheet4: TTabSheet
       Caption = #1052#1085#1086#1075#1086#1091#1075#1086#1083#1100#1085#1080#1082#1080
       ImageIndex = 3
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object Label13: TLabel
         Left = 24
         Top = 3
