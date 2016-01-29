@@ -88,8 +88,6 @@ type
     Button18: TButton;
     Button19: TButton;
     Button20: TButton;
-    SBH_send: TButton;
-    btnSBHget: TButton;
     procedure btn1Click(Sender: TObject);
     procedure btn2Click(Sender: TObject);
     procedure btn3Click(Sender: TObject);
@@ -142,8 +140,6 @@ type
     procedure Button18Click(Sender: TObject);
     procedure Button19Click(Sender: TObject);
     procedure Button20Click(Sender: TObject);
-    procedure SBH_sendClick(Sender: TObject);
-    procedure btnSBHgetClick(Sender: TObject);
   private
     procedure add(num: byte);
     procedure FullBuffer(ch: Char);
@@ -470,25 +466,6 @@ begin
   edtCalc.Text := inttostr(round(strtofloat(edtCalc.Text)));
 end;
 
-procedure TForm1.SBH_sendClick(Sender: TObject);
-var f: TextFile;
-begin
-  assignFile(f, 'data.ini');
-   rewrite(f);
-   Writeln(f, edtCalc.text);
-end;
-
-procedure TForm1.btnSBHgetClick(Sender: TObject);
-var f: TextFile;
-begin
-  if fileexists('data.ini') then
-  try
-  reset(f);
-    edtCalc.Text = inttostr(strtoint(readln(f)));
-  finally
-    closefile(f);
-  end;
-end;
 // Calculator block
 
 // Equation block
